@@ -1,0 +1,137 @@
+/*
+ *program to find average of 5units in two decimal places 
+ */
+package averages;
+
+import java.util.Scanner;/*
+*importation of the scanner
+*/
+public class Averages{
+    public static void main(String[] args){
+        /*
+        *declaration of variables
+        */
+        int num1,num2,num3,num4,num5;
+        System.out.println("Enter marks of five units");
+        Scanner r = new Scanner(System.in);
+        num1 = r.nextInt();
+        num2 = r.nextInt();
+        num3 = r.nextInt();
+        num4 = r.nextInt();
+        num5 = r.nextInt();
+
+        int sum=num1 + num2 + num3 + num4 + num5;
+        System.out.println("Total marks" + sum);
+
+        double avg = (sum/5.0);
+        System.out.println("Average marks" + avg);
+        /*
+        *the "%.2f" rounds off the output to two decimal places
+        */
+        System.out.printf("%.2f",avg);
+
+    }
+}
+ 69  
+largestsmallest/Largestsmallest.java
+@@ -0,0 +1,69 @@
+/*
+ *program to find largest and smallest values 
+ */
+package largestsmallest;
+
+import java.util.Scanner;
+public class Largestsmallest {
+
+    public static void main(String args[]) {
+         Scanner sc = new Scanner(System.in);
+         /*
+        *declaration of variables
+        */
+        int num1;
+         int num2;
+          int num3;
+           int num4;
+            int num5;
+            int smallest;
+            int largest;
+
+        System.out.println("Enter the integers separate by space");
+        num1 = sc.nextInt();
+         num2 = sc.nextInt();
+          num3 = sc.nextInt();
+           num4 = sc.nextInt();
+            num5 = sc.nextInt();
+        sc.close();
+        smallest = num1;
+        /*
+        *the IF statement
+        */
+        if(num2<smallest)
+        {
+            smallest = num2;
+        }
+      if(num3<smallest)
+        {
+            smallest = num3;
+        }
+      if(num4<smallest)
+        {
+            smallest = num4;
+        }
+         if(num5<smallest)
+        {
+            smallest = num5;
+        }
+     largest = num1;
+      if(num2>largest)
+        {
+            largest = num2;
+        }
+     if(num3>largest)
+        {
+            largest = num3;
+        }
+     if(num4>largest)
+        {
+            largest = num4;
+        }
+        if(num5>largest)
+        {
+            largest = num5;
+        }
+    System.out.println("the largest number of the five integer:" + largest);
+    System.out.println("the smallest number of the five integer:" + smallest);
+    }
+}
+ 28  
+multiples/Multiples.java
+@@ -0,0 +1,28 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package multiples;
+
+/*
+ *program to display multiples of 2,3 or 7  within the range 
+ * 71 and 150
+ */
+public class Multiples {
+
+    public static void main(String args[]) {
+        /*
+        *use for statement to execute the program
+        */
+        for(int num=71;num<=150;num++){
+            /*
+            *use if statement and OR(||) to avoid repetition of 
+            *variables
+            */
+      if(num%2==0 || num%3==0 || num%7==0){
+          System.out.println(num);
+
+    }
+        }
+    }
+}
